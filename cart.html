@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <!-- Remix Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+        integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="relative px-4 py-6 flex justify-between items-center lg:px-6">
+        <nav class="relative flex items-center justify-between px-4 py-3">
+
+            <!-- Hamburger -->
+            <button id="menu-btn" class="text-3xl cursor-pointer" aria-label="Open Menu">
+                <i class="ri-menu-line"></i>
+            </button>
+
+            <!-- Menu -->
+            <ul id="menu" class="hidden absolute top-full left-0 w-full bg-gray-300 z-50">
+                <li>
+                    <a href="#" class="flex justify-between items-center px-6 py-4 w-full uppercase">
+                        <span>Shop</span>
+                        <i class="ri-arrow-right-s-line text-3xl"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="flex justify-between items-center px-6 py-4 w-full uppercase">
+                        <span>Explore</span>
+                        <i class="ri-arrow-right-s-line text-3xl"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="flex justify-between items-center px-6 py-4 w-full uppercase">
+                        <span>Support</span>
+                        <i class="ri-arrow-right-s-line text-3xl"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex justify-between items-center px-6 py-4 w-full uppercase">
+                        <span>Valentine's Day</span>
+                        <i class="ri-arrow-right-s-line text-3xl"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <img src="assets/Bose_Logo.png" class="w-42" alt="Bose Logo">
+
+        <div class="flex items-center gap-4">
+            <button class="text-3xl" aria-label="Account">
+                <i class="ri-account-circle-line"></i>
+            </button>
+            <button class="text-3xl" aria-label="Favorite">
+                <i class="ri-heart-line"></i>
+            </button>
+            <button class="text-3xl" aria-label="Cart">
+                <i class="ri-shopping-cart-line"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Your Cart -->
+    <section class="max-w-8xl px-4 py-12 md:px-6 lg:px-8">
+        <h1 class="font-anton font-medium text-4xl md:text-5xl mb-6">Your Cart</h1>
+
+        <!-- Cart -->
+        <div class="md:flex md:gap-12 md:items-start">
+            <div class="space-y-6 md:w-2/3 lg:w-3/4">
+                <!-- 1st Product -->
+                <div class="pt-8 bg-gray-100 p-4">
+                    <div class="flex gap-4 pb-4">
+                        <img class="w-24 h-24 object-cover rounded" src="assets/SLMIILE_TwilightBlue_PDP-SF-Silo1_1500x1120.avif" alt="">
+
+                        <div class="flex-1">
+                            <h2 class="font-medium leading-snug">Bose QuietComfort Headphones</h2>
+
+                            <p class="text-sm text-gray-500 mt-1">Color: Petal Pink</p>
+
+                            <div class="flex items-center gap-3 mt-2">
+                                <span class="text-gray-400 line-through text-sm">$359.00</span>
+                                <span class="font-semibold">$199.00</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 mt-4">
+                                <button class="w-8 h-8 bg-white rounded-full">−</button>
+                                <span class="text-sm">1</span>
+                                <button class="w-8 h-8 bg-white rounded-full">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 border">
+                        <div class="flex justify-between items-start">
+                            <div class="flex items-center gap-3">
+                                <img src="assets/BoseCare_Logo_2025_Blue_88x96_x4.avif"
+                                    class="w-6 h-6 object-contain" alt="">
+
+                                <h3 class="font-medium">BoseCare Protection Plan</h3>
+                            </div>
+
+                            <i class="ri-information-line text-xl"></i>
+                        </div>
+
+                        <p>Choose from two extended warranty plans</p>
+
+                        <div class="border rounded-lg p-4 mt-4">
+                            <div class="flex gap-3">
+                                <input type="radio" name="plan" class="mt-1">
+
+                                <div>
+                                    <p class="font-medium">Accident Protection Plan</p>
+                                    <span class="text-xs border px-2 py-0.5 rounded-full">
+                                        Recommended
+                                    </span>
+
+                                    <p class="text-sm text-gray-500 mt-2">
+                                        Includes accidental damage and mechanical breakdown.
+                                    </p>
+
+                                    <p class="font-semibold mt-2">$59.95</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border rounded-lg p-4 mt-4">
+                            <div class="flex gap-3">
+                                <input type="radio" name="plan" class="mt-1">
+
+                                <div>
+                                    <p class="font-medium">Accident Protection Plan</p>
+                                    <span class="text-xs border px-2 py-0.5 rounded-full">
+                                        Recommended
+                                    </span>
+
+                                    <p class="text-sm text-gray-500 mt-2">
+                                        Includes accidental damage and mechanical breakdown.
+                                    </p>
+
+                                    <p class="font-semibold mt-2">$59.95</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2nd Product -->
+                <div class="pt-8 bg-gray-100 p-4">
+                    <div class="flex gap-4 pb-4">
+                        <img class="w-24 h-24 object-cover rounded" src="assets/SLMIILE_Sandstone_PDP-SF-Silo1_1500x1120.avif" alt="">
+
+                        <div class="flex-1">
+                            <h2 class="font-medium leading-snug">Bose QuietComfort Headphones</h2>
+
+                            <p class="text-sm text-gray-500 mt-1">Color: Petal Pink</p>
+
+                            <div class="flex items-center gap-3 mt-2">
+                                <span class="text-gray-400 line-through text-sm">$359.00</span>
+                                <span class="font-semibold">$199.00</span>
+                            </div>
+
+                            <div class="flex items-center gap-3 mt-4">
+                                <button class="w-8 h-8 bg-white rounded-full">−</button>
+                                <span class="text-sm">1</span>
+                                <button class="w-8 h-8 bg-white rounded-full">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-4 border">
+                        <div class="flex justify-between items-start">
+                            <div class="flex items-center gap-3">
+                                <img src="assets/BoseCare_Logo_2025_Blue_88x96_x4.avif"
+                                    class="w-6 h-6 object-contain" alt="">
+
+                                <h3 class="font-medium">BoseCare Protection Plan</h3>
+                            </div>
+
+                            <i class="ri-information-line text-xl"></i>
+                        </div>
+
+                        <p>Choose from two extended warranty plans</p>
+
+                        <div class="border rounded-lg p-4 mt-4">
+                            <div class="flex gap-3">
+                                <input type="radio" name="plan" class="mt-1">
+
+                                <div>
+                                    <p class="font-medium">Accident Protection Plan</p>
+                                    <span class="text-xs border px-2 py-0.5 rounded-full">
+                                        Recommended
+                                    </span>
+
+                                    <p class="text-sm text-gray-500 mt-2">
+                                        Includes accidental damage and mechanical breakdown.
+                                    </p>
+
+                                    <p class="font-semibold mt-2">$59.95</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border rounded-lg p-4 mt-4">
+                            <div class="flex gap-3">
+                                <input type="radio" name="plan" class="mt-1">
+
+                                <div>
+                                    <p class="font-medium">Accident Protection Plan</p>
+                                    <span class="text-xs border px-2 py-0.5 rounded-full">
+                                        Recommended
+                                    </span>
+
+                                    <p class="text-sm text-gray-500 mt-2">
+                                        Includes accidental damage and mechanical breakdown.
+                                    </p>
+
+                                    <p class="font-semibold mt-2">$59.95</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="py-6 border-t mt-8 md:mt-0 md:w-1/3 md:sticky md:top-24 md:border md:p-6 md:h-fit">
+
+                <h1 class="text-lg font-medium mb-6">Order Summary</h1>
+
+                <div class="space-y-3 text-sm">
+
+                    <div class="flex justify-between items-center">
+                        <p class="text-gray-700">Subtotal</p>
+                        <p class="font-medium">$398.00</p>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <p class="text-gray-700">Standard shipping</p>
+                        <p class="font-medium">Free</p>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <p class="text-gray-700">Tax</p>
+                        <p class="text-gray-400">$--.--</p>
+                    </div>
+
+                    <p class="text-xs text-gray-500 pt-1">
+                        Applicable taxes will be calculated at checkout
+                    </p>
+                </div>
+
+                <div class="border-t border-gray-300 my-6"></div>
+
+                <div class="flex justify-between items-start">
+                    <h2 class="text-2xl font-semibold">Total</h2>
+
+                    <div class="text-right">
+                        <p class="text-xl font-bold">$398.00</p>
+                        <p class="text-sm text-gray-600 mt-1">
+                            You are saving a total $260.00
+                        </p>
+                    </div>
+                </div>
+
+                <div class="py-6 space-y-2">
+                    <button class="border py-3 w-full rounded-sm mb-4 cursor-pointer hover:bg-black hover:text-white duration-300">
+                        <i class="ri-apple-fill text-xl"></i>
+                        <span class="text-lg">Pay</span>
+                    </button>
+
+                    <button class="border py-3 w-full rounded-sm mb-4 cursor-pointer hover:bg-gray-100 duration-300">
+                            <i class="ri-paypal-fill"></i>
+                            <span class="text-md">PayPal</span>
+                    </button>
+
+                    <button class="border py-3 w-full rounded-sm mb-4 cursor-pointer hover:bg-black hover:text-white duration-300">
+                        <i class="ri-lock-fill"></i>
+                        <span class="uppercase text-sm">Checkout</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommend Product -->
+    <section class="py-12">
+        <h1 class="font-anton font-medium text-4xl px-4 pb-6 md:text-5xl md:px-6 lg:px-8 lg:pb-0">Recommended for you</h1>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:px-4 lg:px-8 lg:py-24">
+            <!-- 1st Product -->
+            <div class="flex flex-col h-full">
+                <img class="transition-transform duration-500 hover:scale-110"
+                    src="assets/SLMIILE_Sandstone_PDP-SF-Silo1_1500x1120.avif" alt="Bose Sandstone">
+
+                <div class="px-4 space-y-3">
+                    <p class="font-light"><span class="font-medium">Color</span>: Sandstone</p>
+
+                    <div class="flex gap-2">
+                        <span class="h-5 w-5 rounded-full bg-stone-400 ring-1 ring-black lg:h-6 lg:w-6"></span>
+                        <span class="h-5 w-5 rounded-full bg-black lg:h-6 lg:w-6"></span>
+                        <span class="h-5 w-5 rounded-full bg-pink-200 lg:h-6 lg:w-6"></span>
+                        <span class="h-5 w-5 rounded-full bg-cyan-800 lg:h-6 lg:w-6"></span>
+                    </div>
+
+                    <span class="inline-block bg-black text-white text-xs px-3 py-1 rounded-full lg:text-sm">
+                        New color
+                    </span>
+
+                    <p class="font-medium leading-snug lg:text-xl">
+                        Bose SoundLink Micro Portable Speaker (2nd Gen)
+                    </p>
+
+                    <p class="font-semibold">$129.00</p>
+
+                    <button class="w-full border py-3 uppercase duration-300 hover:bg-black hover:text-white">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2nd Product -->
+            <div class="flex flex-col h-full">
+                <img class="transition-transform duration-500 hover:scale-110"
+                    src="assets/SLMIILE_PetalPink_PDP-SF-Silo1_1500x1120.avif" alt="Bose Petal Pink">
+
+                <div class="px-4 space-y-3">
+                    <p class="font-light"><span class="font-medium">Color</span>: Petal Pink</p>
+
+                    <div class="flex gap-2">
+                        <span class="h-5 w-5 rounded-full bg-stone-400 lg:h-6 lg:w-6"></span>
+                        <span class="h-5 w-5 rounded-full bg-black lg:h-6 lg:w-6"></span>
+                        <span class="h-5 w-5 rounded-full bg-pink-200 ring-1 ring-black lg:h-6 lg:w-6"></span>
+                        <span class="h-5 w-5 rounded-full bg-cyan-800 lg:h-6 lg:w-6"></span>
+                    </div>
+
+                    <span class="inline-block bg-black text-white text-xs px-3 py-1 rounded-full lg:text-sm">
+                        New color
+                    </span>
+
+                    <p class="font-medium leading-snug lg:text-xl">
+                        Bose SoundLink Micro Portable Speaker (2nd Gen)
+                    </p>
+
+                    <p class="font-semibold">$129.00</p>
+
+                    <button class="w-full border py-3 uppercase duration-300 hover:bg-black hover:text-white">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3rd Product -->
+            <div class="flex flex-col h-full">
+                <img class="transition-transform duration-500 hover:scale-110"
+                    src="assets/SLMIILE_TwilightBlue_PDP-SF-Silo1_1500x1120.avif" alt="Bose Twilight Blue">
+
+                <div class="px-4 space-y-3">
+                    <p class="font-light"><span class="font-medium">Color</span>: Twilight Blue</p>
+
+                    <div class="flex gap-2">
+                        <span class="h-5 w-5 rounded-full bg-stone-400 lg:h-6 lg:w-6"></span>
+                        <span class="h-5 w-5 rounded-full bg-black lg:h-6 lg:w-6"></span>
+                        <span class="h-5 w-5 rounded-full bg-pink-200 lg:h-6 lg:w-6"></span>
+                        <span class="h-5 w-5 rounded-full bg-cyan-800 ring-1 ring-black lg:h-6 lg:w-6"></span>
+                    </div>
+
+                    <span class="inline-block bg-black text-white text-xs px-3 py-1 rounded-full lg:text-sm">
+                        New color
+                    </span>
+
+                    <p class="font-medium leading-snug lg:text-xl">
+                        Bose SoundLink Micro Portable Speaker (2nd Gen)
+                    </p>
+
+                    <p class="font-semibold">$129.00</p>
+
+                    <button class="w-full border py-3 uppercase duration-300 hover:bg-black hover:text-white">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-4 pb-12 md:px-6 lg:px-8">
+        <h1 class="font-anton text-4xl md:text-5xl">Why buy from Bose</h1>
+
+        <div class="overflow-x-auto no-scrollbar pt-24">
+            <div class="flex gap-x-4 lg:gap-x-8">
+                <div class="shrink-0 ps-4">
+                    <i class="ri-calendar-2-line text-4xl bg-slate-200 rounded-full px-8 py-8 lg:text-6xl lg:px-12 lg:py-12"></i>
+
+                    <h2 class="pt-16 font-anton text-xl lg:text-3xl">90-day return policy</h2>
+                    <p class="pt-6 font-light lg:text-lg">Try it for 90 days to make sure it’s right <br> for you.</p>
+                </div>
+                <div class="shrink-0 ps-4">
+                    <i class="ri-calendar-2-line text-5xl bg-slate-200 rounded-full px-8 py-8 lg:text-6xl lg:px-12 lg:py-12"></i>
+
+                    <h2 class="pt-16 font-anton text-xl lg:text-3xl">Price Match Promise</h2>
+                    <p class="pt-6 font-light lg:text-lg">Shop confidently. We’ll match a <br> lower price.</p>
+                </div>
+                <div class="shrink-0 ps-4">
+                    <i class="ri-calendar-2-line text-5xl bg-slate-200 rounded-full px-8 py-8 lg:text-6xl lg:px-12 lg:py-12"></i>
+
+                    <h2 class="pt-16 font-anton text-xl lg:text-3xl">Complimentary shipping <br> & returns</h2>
+                    <p class="pt-6 font-light lg:text-lg">On all in-stock orders of $49 or more.</p>
+                </div>
+                <div class="shrink-0 ps-4">
+                    <i class="ri-calendar-2-line text-5xl bg-slate-200 rounded-full px-8 py-8 lg:text-6xl lg:px-12 lg:py-12"></i>
+
+                    <h2 class="pt-16 font-anton text-xl lg:text-3xl">My Bose Perks</h2>
+                    <p class="pt-6 font-light lg:text-lg">My Bose members receive welcome and <br> birthday offers, exclusive experiences, <br> and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="px-4 py-12 md:px-6">
+        <div class="space-y-4 md:text-center">
+            <h1 class="font-anton text-4xl md:text-5xl">Being first has its perks</h1>
+            <p class="font-light">Sign up to receive Bose emails and communications for exclusive benefits, promotions and new product information.</p>
+        </div>
+
+        <form class="mt-8 space-y-6">
+            <input type="email" placeholder="Email address" class="w-full border-b pb-2 text-base placeholder:text-xs focus:outline-none" required>
+
+            <button type="submit" class="relative inline-flex items-center gap-2 border px-6 py-2 uppercase text-sm cursor-pointer duration-300 hover:bg-black hover:text-white">Sign Up
+            <i class="ri-arrow-right-line text-lg"></i>
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer, Accordion -->
+    <footer class="py-12">
+        <div class="px-4 mt-3 md:px-6" id="accordion-flush" data-accordion="collapse"
+            data-active-classes="bg-neutral-primary text-heading" data-inactive-classes="text-body">
+
+            <p class="text-sm pb-3 border-b border-gray-500"><a href="#" class="text-gray-700 hover:text-black hover:underline">Home</a> / New Arrivals & New Products</p>
+            
+            <!-- 1st Accordion -->
+            <h2 id="accordion-flush-heading-1">
+                <button type="button"
+                    class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-body border-b border-gray-500 border-default gap-3 cursor-pointer"
+                    data-accordion-target="#accordion-flush-body-1" aria-expanded="true"
+                    aria-controls="accordion-flush-body-1">
+                    <span class="text-lg font-normal hover:underline">Customer Care</span>
+                    <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m5 15 7-7 7 7" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+                <div class="px-4 flex flex-col gap-y-6 py-5 border-b border-gray-500 border-default text-md">
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Troubleshooting</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Repair & Replacement</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Order Tracking</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Sign In or Join My Bose</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">My Bose Perks</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Register Your Product</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">BoseCare</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Contact Us</a>
+                </div>
+            </div>
+            <!-- 2nd Accordion -->
+            <h2 id="accordion-flush-heading-2">
+                <button type="button"
+                    class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-body border-b border-gray-500 border-default gap-3 cursor-pointer"
+                    data-accordion-target="#accordion-flush-body-2" aria-expanded="false"
+                    aria-controls="accordion-flush-body-2">
+                    <span class="text-lg font-normal hover:underline">Our Company</span>
+                    <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m5 15 7-7 7 7" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                <div class="px-4 flex flex-col gap-y-6 py-5 border-b border-gray-500 border-default text-md">
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">About Us</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Find a Store</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">ESG</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Careers</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Press Room</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Stories</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Partnerships & Licensing</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Bose Worldwide</a>
+                </div>
+            </div>
+            <!-- 3rd Accordion -->
+            <h2 id="accordion-flush-heading-3">
+                <button type="button"
+                    class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-body border-b border-gray-500 border-default gap-3 cursor-pointer"
+                    data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
+                    aria-controls="accordion-flush-body-3">
+                    <span class="text-lg font-normal hover:underline">Offers</span>
+                    <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m5 15 7-7 7 7" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+                <div class="px-4 flex flex-col gap-y-6 py-5 border-b border-gray-500 border-default text-md">
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Gift Cards</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">ID.me Group Program</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Corporate Gifting</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Partner & Employee Program</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Certified Refurbished</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Trade Up</a>
+                </div>
+            </div>
+            <!-- 4th Accordion -->
+            <h2 id="accordion-flush-heading-4">
+                <button type="button"
+                    class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-body border-b border-gray-500 border-default gap-3 cursor-pointer"
+                    data-accordion-target="#accordion-flush-body-4" aria-expanded="false"
+                    aria-controls="accordion-flush-body-4">
+                    <span class="text-lg font-normal hover:underline">Additional Links</span>
+                    <svg data-accordion-icon class="w-5 h-5 rotate-180 shrink-0" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="m5 15 7-7 7 7" />
+                    </svg>
+                </button>
+            </h2>
+            <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
+                <div class="px-4 flex flex-col gap-y-6 py-5 border-b border-gray-500 border-default text-md">
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Automotive</a>
+                    <a class="text-gray-700 hover:text-black hover:underline" href="#">Reseller Portal</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-8 flex gap-x-6 justify-center pb-8 border-b border-gray-500">
+            <a class="text-4xl text-gray-700" href="https://www.instagram.com/bose/">
+                <i class="ri-instagram-line"></i>
+            </a>
+            <a class="text-4xl text-gray-700" href="https://x.com/bose">
+                <i class="ri-twitter-x-line"></i>
+            </a>
+            <a class="text-4xl text-gray-700" href="https://www.facebook.com/Bose/">
+                <i class="ri-facebook-line"></i>
+            </a>
+            <a class="text-4xl text-gray-700" href="https://www.youtube.com/user/bose">
+                <i class="ri-youtube-line"></i>
+            </a>
+            <a class="text-4xl text-gray-700" href="https://tiktok.com/@bose">
+                <i class="ri-tiktok-line"></i>
+            </a>
+        </div>
+
+        <div class="pt-12">
+            <p class="mb-4 text-center">&copy; Bose Corporation 2026</p>
+
+            <nav>
+                <ul class="flex flex-wrap justify-center gap-x-6 gap-y-3">
+                <li><a href="#" class="hover:underline">Sitemap</a></li>
+                <li><a href="#" class="hover:underline">Legal</a></li>
+                <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                <li><a href="#" class="hover:underline">Accessibility</a></li>
+                <li><a href="#" class="hover:underline">CA Notice of Collection</a></li>
+                <li><a href="#" class="hover:underline">Your privacy choices</a></li>
+                <li><a href="#" class="hover:underline">Cookies Notice</a></li>
+                <li><a href="#" class="hover:underline">Terms of Sale</a></li>
+                <li><a href="#" class="hover:underline">Terms of Use</a></li>
+                <li><a href="#" class="hover:underline">CA Supply Chains Act</a></li>
+                </ul>
+            </nav>   
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

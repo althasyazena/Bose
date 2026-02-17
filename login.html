@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Remix Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+        integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="flex justify-center py-6">
+        <img src="assets/Bose_Logo.png" class="w-42" alt="Bose Logo">
+    </header>
+
+    
+
+    <section class="px-6 py-12 md:flex md:min-h-screen bg-none 
+                    md:bg-[url('/assets/Bose-x-BonBon-Giveaway_SF_HP_Feature2x3_Desktop_1332x1506.avif')]
+                    md:bg-center md:bg-no-repeat
+                    lg:bg-cover lg:px-38">
+                    
+        <div class="md:w-1/2 md:pr-12 md:mt-14 md:text-white pl-6">
+            <a href="#" class="flex items-center gap-x-2 w-full uppercase mb-4 lg:mb-8">
+                <i class="ri-arrow-left-line text-lg font-semibold"></i>
+                <span class="text-sm">Cancel</span>
+            </a>
+
+            <h1 class="font-anton font-medium text-4xl mb-2 md:text-left lg:text-5xl">Sign In or Join My Bose</h1>
+            <p class="text-md md:text-left lg:text-lg">Please enter your email address to sign in or register to become a My Bose member.</p>
+        </div>
+
+        <div class="max-w-xl mx-auto py-10 md:bg-white px-10 md:max-w-md">
+            <input type="email" placeholder="Email"
+                class="w-full bg-gray-100 border-b-2 border-gray-300 px-4 py-3 text-lg outline-none focus:border-black transition placeholder:text-sm">
+
+            <p class="text-sm text-gray-700 mt-6">By continuing, you agree to our
+                <a href="#" class="underline font-medium">Privacy Policy</a>
+                and
+                <a href="#" class="underline font-medium">Terms of Use</a>.
+            </p>
+
+            <button
+                class="w-full bg-black text-white py-4 mt-6 rounded-sm text-sm font-medium tracking-wider cursor-pointer">NEXT
+            </button>
+
+            <p class="uppercase py-8 text-center">Or</p>
+
+            <button class="border py-3 w-full rounded-sm mb-4 cursor-pointer hover:bg-black hover:text-white duration-300">
+                <i class="ri-facebook-fill text-lg"></i>
+                <span class="uppercase text-sm">Sign up/Sign in with Facebook</span>
+            </button>
+
+            <button class="border py-3 w-full rounded-sm cursor-pointer hover:bg-black hover:text-white duration-300">
+                <i class="ri-apple-line text-lg"></i>
+                <span class="uppercase text-sm">Sign up/Sign in with Apple</span>
+            </button>
+        </div>
+
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
