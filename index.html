@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
         integrity="sha512-XcIsjKMcuVe0Ucj/xgIXQnytNwBttJbNjltBV18IOnru2lDPe9KRRyvCXw6Y5H415vbBLRm8+q6fmLUU7DfO6Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FlowBite -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
     <!-- CSS -->
     <link rel="stylesheet" href="src/output.css">
 </head>
@@ -22,9 +24,9 @@
             </button>
 
             <!-- Menu -->
-            <ul id="menu" class="hidden absolute top-full left-0 w-full bg-gray-300 z-50">
+            <ul id="menu" class="hidden absolute top-full left-0 bg-white z-50 min-w-55 shadow-md">
                 <li>
-                    <a href="#" class="flex justify-between items-center px-6 py-4 w-full uppercase">
+                    <a href="#" class="flex justify-between items-center px-8 py-5 w-full uppercase tracking-wide">
                         <span>Shop</span>
                         <i class="ri-arrow-right-s-line text-3xl"></i>
                     </a>
@@ -52,18 +54,20 @@
             </ul>
         </nav>
 
-        <img src="assets/Bose_Logo.png" class="w-42" alt="Bose Logo">
+        <a href="index.html" class="cursor-pointer">
+            <img src="assets/Bose_Logo.png" class="w-42" alt="Bose Logo">
+        </a>
 
         <div class="flex items-center gap-4">
-            <button class="text-3xl" aria-label="Account">
+            <a href="login.html" class="text-3xl" aria-label="Account">
                 <i class="ri-account-circle-line"></i>
-            </button>
-            <button class="text-3xl" aria-label="Favorite">
+            </a>
+            <a href="#" class="text-3xl" aria-label="Favorite">
                 <i class="ri-heart-line"></i>
-            </button>
-            <button class="text-3xl" aria-label="Cart">
+            </a>
+            <a href="cart.html" class="text-3xl" aria-label="Cart">
                 <i class="ri-shopping-cart-line"></i>
-            </button>
+            </a>
         </div>
     </header>
 
@@ -96,8 +100,10 @@
             lg:grid lg:grid-cols-4 lg:overflow-visible">
             <!-- 1st Product -->
             <div class="max-w-65 shrink-0 lg:max-w-none lg:w-full">
-                <img class="transition-transform duration-500 hover:scale-110"
-                    src="assets/QCHLE26-PetalPink_SF_Gallery_1.avif" alt="Bose Sandstone">
+                <a href="detail.html">
+                    <img class="transition-transform duration-500 hover:scale-110"
+                        src="assets/QCHLE26-PetalPink_SF_Gallery_1.avif" alt="Bose Sandstone">
+                </a>
 
                 <div class="px-4 space-y-3">
                     <p class="font-light"><span class="font-medium">Color</span>: Petal Pink</p>
@@ -476,5 +482,7 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <!-- Flowbite JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
 </body>
 </html>

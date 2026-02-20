@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout</title>
+
+<!-- Remix Icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"/>
+
+<!-- Tailwind -->
+<link rel="stylesheet" href="src/output.css">
+</head>
+
+<body class="bg-white">
+
+<!-- Header -->
+    <header class="relative px-4 py-6 flex justify-between items-center lg:px-6">
+        <nav class="relative flex items-center justify-between px-4 py-3">
+
+            <!-- Hamburger -->
+            <button id="menu-btn" class="text-3xl cursor-pointer" aria-label="Open Menu">
+                <i class="ri-menu-line"></i>
+            </button>
+
+            <!-- Menu -->
+            <ul id="menu" class="hidden absolute top-full left-0 bg-white z-50 min-w-55 shadow-md">
+                <li>
+                    <a href="#" class="flex justify-between items-center px-8 py-5 w-full uppercase tracking-wide">
+                        <span>Shop</span>
+                        <i class="ri-arrow-right-s-line text-3xl"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="flex justify-between items-center px-6 py-4 w-full uppercase">
+                        <span>Explore</span>
+                        <i class="ri-arrow-right-s-line text-3xl"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="flex justify-between items-center px-6 py-4 w-full uppercase">
+                        <span>Support</span>
+                        <i class="ri-arrow-right-s-line text-3xl"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex justify-between items-center px-6 py-4 w-full uppercase">
+                        <span>Valentine's Day</span>
+                        <i class="ri-arrow-right-s-line text-3xl"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <a href="index.html" class="cursor-pointer">
+            <img src="assets/Bose_Logo.png" class="w-42" alt="Bose Logo">
+        </a>
+
+        <div class="flex items-center gap-4">
+            <a href="login.html" class="text-3xl" aria-label="Account">
+                <i class="ri-account-circle-line"></i>
+            </a>
+            <a href="#" class="text-3xl" aria-label="Favorite">
+                <i class="ri-heart-line"></i>
+            </a>
+            <a href="cart.html" class="text-3xl" aria-label="Cart">
+                <i class="ri-shopping-cart-line"></i>
+            </a>
+        </div>
+    </header>
+
+<!-- MAIN -->
+<section class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-12">
+
+<!-- LEFT FORM -->
+<div>
+    <h2 class="text-xl font-semibold mb-6">Shipping information</h2>
+
+    <form class="space-y-5">
+
+        <!-- name -->
+        <div class="grid grid-cols-2 gap-4">
+            <input type="text" placeholder="First name"
+            class="border p-3 w-full rounded focus:outline-none focus:ring-1 focus:ring-black">
+
+            <input type="text" placeholder="Last name"
+            class="border p-3 w-full rounded focus:outline-none focus:ring-1 focus:ring-black">
+        </div>
+
+        <!-- email -->
+        <input type="email" placeholder="Email address"
+        class="border p-3 w-full rounded focus:outline-none focus:ring-1 focus:ring-black">
+
+        <!-- phone -->
+        <input type="text" placeholder="Phone number"
+        class="border p-3 w-full rounded focus:outline-none focus:ring-1 focus:ring-black">
+
+        <!-- address -->
+        <input type="text" placeholder="Address"
+        class="border p-3 w-full rounded focus:outline-none focus:ring-1 focus:ring-black">
+
+        <input type="text" placeholder="Apartment, suite, etc (optional)"
+        class="border p-3 w-full rounded focus:outline-none focus:ring-1 focus:ring-black">
+
+        <!-- city -->
+        <div class="grid grid-cols-2 gap-4">
+            <input type="text" placeholder="City"
+            class="border p-3 w-full rounded focus:outline-none focus:ring-1 focus:ring-black">
+
+            <input type="text" placeholder="Postal code"
+            class="border p-3 w-full rounded focus:outline-none focus:ring-1 focus:ring-black">
+        </div>
+
+        <!-- country -->
+        <input type="text" placeholder="Country"
+        class="border p-3 w-full rounded focus:outline-none focus:ring-1 focus:ring-black">
+
+
+        <!-- PAYMENT -->
+        <h2 class="text-xl font-semibold pt-8">Payment method</h2>
+
+        <div class="border p-4 rounded space-y-3">
+            <label class="flex items-center gap-3">
+                <input type="radio" name="pay" checked>
+                Credit Card
+            </label>
+
+            <label class="flex items-center gap-3">
+                <input type="radio" name="pay">
+                PayPal
+            </label>
+
+            <label class="flex items-center gap-3">
+                <input type="radio" name="pay">
+                Apple Pay
+            </label>
+        </div>
+
+        <!-- card -->
+        <input type="text" placeholder="Card number"
+        class="border p-3 w-full rounded focus:outline-none focus:ring-1 focus:ring-black">
+
+        <div class="grid grid-cols-2 gap-4">
+            <input type="text" placeholder="MM/YY"
+            class="border p-3 w-full rounded focus:outline-none focus:ring-1 focus:ring-black">
+
+            <input type="text" placeholder="CVC"
+            class="border p-3 w-full rounded focus:outline-none focus:ring-1 focus:ring-black">
+        </div>
+
+        <!-- BUTTON -->
+        <button
+        class="w-full bg-black text-white py-4 mt-6 rounded uppercase tracking-wider cursor-pointer hover:opacity-80">
+        Pay now
+        </button>
+
+    </form>
+</div>
+
+<!-- RIGHT SUMMARY -->
+<div class="bg-gray-50 p-6 h-fit sticky top-24">
+    <h2 class="text-xl font-semibold mb-6">Order Summary</h2>
+
+    <!-- product -->
+    <div class="flex gap-4 mb-6">
+        <img src="assets/SLMIILE_Sandstone_PDP-SF-Silo1_1500x1120.avif"
+        class="w-20 h-20 object-cover rounded">
+
+        <div class="flex-1">
+            <p class="font-medium">Bose QuietComfort</p>
+            <p class="text-sm text-gray-500">Color: Sandstone</p>
+            <p class="font-semibold mt-1">$199.00</p>
+        </div>
+    </div>
+
+    <!-- price -->
+    <div class="space-y-3 text-sm">
+        <div class="flex justify-between">
+            <span>Subtotal</span>
+            <span>$199.00</span>
+        </div>
+
+        <div class="flex justify-between">
+            <span>Shipping</span>
+            <span>Free</span>
+        </div>
+
+        <div class="flex justify-between">
+            <span>Tax</span>
+            <span>$10.00</span>
+        </div>
+    </div>
+
+    <div class="border-t my-6"></div>
+
+    <div class="flex justify-between text-lg font-semibold">
+        <span>Total</span>
+        <span>$209.00</span>
+    </div>
+</div>
+
+</section>
+
+</body>
+</html>
